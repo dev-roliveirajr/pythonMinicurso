@@ -2,7 +2,7 @@ import pandas as pd
 import utils_email
 
 # importar base de dados
-tabela_vendas = pd.read_excel('Vendas.xlsx')
+tabela_vendas = pd.read_excel('assets\Vendas.xlsx')
 
 # visualizar a base de dados
 pd.set_option('display.max_columns', None)
