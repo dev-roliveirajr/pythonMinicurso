@@ -1,0 +1,2 @@
+remetente = "dev.roliveirajr@gmail.com"
+senha = "dxhysrwmptvngmxw"
