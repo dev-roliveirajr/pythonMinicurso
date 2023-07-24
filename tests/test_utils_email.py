@@ -1,4 +1,6 @@
-from utils_email import Email
+import sys
+sys.path.append(".")
+from src.models.utils_email import Email
 
 def test_parametros():
     email = Email()
