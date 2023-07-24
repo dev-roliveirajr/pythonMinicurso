@@ -1,5 +1,6 @@
 import smtplib
 import email.message
+import sys
 
 class Email:
 
@@ -35,7 +36,7 @@ class Email:
 
     def config_email(self):
         parametros = []
-        with open("email_config.txt") as arquivo:
+        with open("src/models/email_config.txt") as arquivo:
             linhas = arquivo.readlines()
             arquivo.close()
 
