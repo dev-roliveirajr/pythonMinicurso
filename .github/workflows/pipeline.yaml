@@ -24,4 +24,4 @@ jobs:
         run: pip pandas
 
       - name: Executa o Pytest
-        run: pytest
+        run: pytest222
