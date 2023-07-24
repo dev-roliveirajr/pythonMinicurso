@@ -2,7 +2,7 @@ import pandas as pd
 import utils_email
 
 # importar base de dados
-tabela_vendas = pd.read_excel('assets\Vendas.xlsx')
+tabela_vendas = pd.read_excel('Vendas.xlsx')
 
 # visualizar a base de dados
 pd.set_option('display.max_columns', None)
@@ -20,5 +20,6 @@ report = tabela_vendas[['Produto', 'Ticket Medio Produto', 'ID Loja', 'Ticket Me
 
 # enviar email com o relatório
 email = utils_email.Email()
+destinatario = "cihadak356@muzitp.com"
 mensagem = f"<P>Olá,</P><P>Segue o relatório semanal de vendas:</P>{report.to_html()}<P>Obrigado.</P>"
-email.enviar_email("", "cihadak356@muzitp.com", "Relatório Semanal de Vendas", mensagem)
+email.enviar_email("", destinatario, "Relatório Semanal de Vendas", mensagem)
