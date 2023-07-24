@@ -19,3 +19,9 @@ jobs:
 
       - name: instala o pytest
         run: pip install pytest
+
+      - name: instala o pandas
+        run: pip pandas
+
+      - name: Executa o Pytest
+        run: pytest
