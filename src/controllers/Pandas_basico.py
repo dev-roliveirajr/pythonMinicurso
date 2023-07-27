@@ -1,7 +1,8 @@
+from IPython.display import display
 import pandas as pd
 
 # importar base de dados
-tabela_vendas = pd.read_excel('Vendas.xlsx')
+tabela_vendas = pd.read_excel('../../Vendas.xlsx')
 
 # visualizar a base de dados
 pd.set_option('display.max_columns', None)
@@ -31,3 +32,5 @@ tabela_vendas['Ticket Medio Produto Loja'] = tabela_vendas.groupby(['Produto', '
 #print(tabela_vendas)
 
 report = tabela_vendas[['Produto', 'Ticket Medio Produto', 'ID Loja', 'Ticket Medio Produto Loja']].loc[tabela_vendas['Produto'] == 'Bermuda'].groupby(['Produto', 'Ticket Medio Produto', 'ID Loja']).mean()
+
+display(report)
